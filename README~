@@ -1,4 +1,4 @@
-Updated on 11/7/2017 [Tested on Ubuntu 14.04 and Ubuntu 17.04]
+Updated on 11/7/2017 [Tested on Ubuntu 14.04 and Ubuntu 17.04
 
 To compile the code you need to download the open source GSL library from  ftp://ftp.gnu.org/gnu/gsl/gsl-latest.tar.gz (For Linux).
 Once you downloaded the file in a folder, you need to compile the GSL library using the command below:
