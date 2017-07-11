@@ -1,0 +1,14 @@
+I: 3
+gamma: 0.100000
+train percent: 0.8
+gibbs max iter: 1000
+burn in: 899
+sampling lag: 10
+K_i: 10
+W_i: 0
+a: 0.700000
+b: 10
+alpha: 0.1
+top words: 50
+train files: icml.txtlst jmlr.txtlst tp.txtlst
+

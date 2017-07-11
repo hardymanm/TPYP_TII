@@ -1,0 +1,6 @@
+./spyp -est -v '/home/hardyman/Documents/ebuka/SPYP_Exp/data/test/test.vo'  -t '/home/hardyman/Documents/ebuka/SPYP_Exp/data' -s '/home/hardyman/Documents/ebuka/TPYP_TII/tr_setting.txt'
+
+
+where -v is the location to vocabulary file *.vo
+-t is the location of data *.dat
+-s is the location of the setting file tr_setting.txt

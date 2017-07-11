@@ -1,0 +1,54 @@
+The code is based on the open source GSL library, it implements the model with *identity transformation matrices* in the following paper:
+
+Changyou Chen, Wray Buntine, Nan Ding, Lexing Xie, and Lan Du.
+Differential Topic Models
+IEEE TRANSACTIONS ON PATTERN ANALYSIS AND MACHINE INTELLIGENCE (TPAMI), 2014
+
+The code is in the beta version where there are a lot of unused functions defined in the code (these were used when doing the experiments in the paper, the user should ignore these functions), and the format is not nice to look. It was tested in Ubuntu system. To run the code, you need to specify the following files:
+
+1. tr_setting.txt
+
+Example format (need to delete the parenthesis and the content inside):
+
+=================================
+I: 3 (the number of groups)
+gamma: 0.100000 (Dirichlet hyperparameter for the topic-word distribution)
+train percent: 0.8 (percentage of data used for training)
+gibbs max iter: 1000 (number of Gibbs iterations)
+burn in: 899 (burn in)
+sampling lag: 10 (sampling lag)
+K_i: 10 (number of topics)
+W_i: 0 (leave it to *0*)
+a: 0.700000 (a parameter for the PDP, 0 < a < 1)
+b: 10 (b parameter for the PDP, b > 0)
+alpha: 0.1 (Dirichlet hyperparameter for the topic distribution)
+top words: 50 (number of top words to print topics)
+train files: icml.txtlst jmlr.txtlst tp.txtlst (training files)
+==================================
+
+2. training files:
+
+Example format (need to delete the parenthesis and the content inside):
+
+===============================================
+doc:1 (same for the beginning of each document)
+para:3 (number of words in this document)
+word:0 (first word index, starting from 0)
+word:1 (second word index)
+word:2 (third word index)
+doc:1 (another document)
+para:2
+word:1
+word:1
+================================================
+
+3. Vocabulary file:
+
+Example format (need to delete the parenthesis and the content inside):
+
+================================================
+0:I (the first word is *I*)
+1:you (the second word is *you*)
+================================================
+
+After creating these files, you need to specify their corresponding paths in the *Makefile*.
